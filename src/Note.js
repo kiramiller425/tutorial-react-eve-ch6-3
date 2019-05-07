@@ -21,7 +21,7 @@ class Note extends Component {
 		})
 	}
 	save() {
-		alert('saved!')
+		alert(this._newText.value)
 	}
 	remove() {
 		alert('removing note')
@@ -30,7 +30,7 @@ class Note extends Component {
 		return (
 			<div className="note">
 				<form>
-					<textarea />
+					<textarea ref={input => this._newText = input} />
 					<button onClick={this.save}><FaSave /></button>
 				</form>
 			</div>
